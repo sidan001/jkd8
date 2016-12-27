@@ -1,4 +1,4 @@
-package com.chou.practice;
+package com.chou.practice.number_based_logical_programs;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
