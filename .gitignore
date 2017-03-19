@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 *.class
-
+*.iml
 # BlueJ files
 *.ctxt
 
@@ -29,3 +29,5 @@ hs_err_pid*
 build/
 .idea/vcs.xml
 .idea/
+..gitignore.un~
+.gitignore~

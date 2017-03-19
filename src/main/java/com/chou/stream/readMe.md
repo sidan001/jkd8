@@ -28,4 +28,21 @@ Intermediate operations
 terminal operation
     
     After the terminal operation is performed, the stream pipeline is considered consumed, and can no longer be used;
-    if you need to traverse the same data source again, you must return to the data source to get a new stream. 
+    if you need to traverse the same data source again, you must return to the data source to get a new stream.
+
+### Target Typing ( the type of a lambda expression)
+
+ [Target Types](https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html)
+
+ [the type of a lambda expression](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#target-typing)
+
+ The data type that these methods expect is called the target type. To determine the type of a lambda expression, the Java compiler uses the target type of the context or situation in which the lambda expression was found. It follows that you can only use lambda expressions in situations in which the Java compiler can determine a target type:
+
+* Variable declarations
+* Assignments
+* Return statements
+* Array initializers
+* Method or constructor arguments
+* Lambda expression bodies
+* Conditional expressions, ?:
+* Cast expressions
