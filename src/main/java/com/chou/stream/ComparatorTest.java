@@ -5,9 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Created by liuchou on 2017/3/18.
- */
+
 public class ComparatorTest {
     public static void main(String[] args) {
         List<String> stringList = Arrays.asList("hello", "world", "nice", "work", "system", "comparator");

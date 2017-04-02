@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Created by liuchou on 2017/3/18.
- */
+
 public class CollectorTest {
     public static void main(String[] args) {
         Student student1 = new Student("derek",30, Student.SEX.MALE,90);
