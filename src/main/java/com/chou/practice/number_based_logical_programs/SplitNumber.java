@@ -14,7 +14,7 @@ public class SplitNumber {
 
         System.out.println(digitsToStream(13564687).map(String::valueOf).collect(Collectors.joining(" ")));
 
-
+        System.out.println(Arrays.stream((123124444+"").split("")).collect(Collectors.joining(" ")));
     }
 
 

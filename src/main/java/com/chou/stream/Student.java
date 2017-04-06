@@ -6,6 +6,7 @@ public class Student {
     int age;
     SEX sex;
     int score;
+    boolean isVegetarian;
 
     public Student(String name, int age, SEX sex, int score) {
         this.name = name;
@@ -14,8 +15,24 @@ public class Student {
         this.score = score;
     }
 
+    public Student(String name, int age, SEX sex, int score, boolean isVegetarian) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.score = score;
+        this.isVegetarian = isVegetarian;
+    }
+
     enum SEX{
         MALE,FEMALE;
+    }
+
+    public boolean isVegetarian() {
+        return isVegetarian;
+    }
+
+    public void setVegetarian(boolean vegetarian) {
+        isVegetarian = vegetarian;
     }
 
     public String getName() {
@@ -57,6 +74,7 @@ public class Student {
                 ", age=" + age +
                 ", sex=" + sex +
                 ", score=" + score +
+                ", isVegetarian=" + isVegetarian +
                 '}';
     }
 }
