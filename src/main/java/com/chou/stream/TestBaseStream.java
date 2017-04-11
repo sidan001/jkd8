@@ -35,7 +35,7 @@ public class TestBaseStream {
         final Spliterator spliterator_for_split = integers.stream().spliterator();
         System.out.printf("this spliterator_for_split size before trySplit: %d\n", spliterator_for_split.estimateSize());
         final Spliterator<Integer> subSpliterator = spliterator_for_split.trySplit();
-        System.out.printf("this spliterator_for_split size  before trySplit : %d\t\tsubSpliterator size: %d\n", spliterator_for_split.estimateSize(), subSpliterator.estimateSize());
+        System.out.printf("this spliterator_for_split size  after trySplit : %d\t\tsubSpliterator size: %d\n", spliterator_for_split.estimateSize(), subSpliterator.estimateSize());
 
 
 
