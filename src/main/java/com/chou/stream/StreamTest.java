@@ -1,10 +1,8 @@
 package com.chou.stream;
 
 
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest {
@@ -41,11 +39,23 @@ public class StreamTest {
                 .flatMap(string -> Stream.of(string.split("(?!^)")))
                 .distinct().sorted().forEach(System.out::println);
 
+        List<Integer> numbers = Arrays.asList(11, 3, 4, 5, 9, 7);
+        List<Integer> result =
+                numbers.stream()
+                        .peek(x -> System.out.println("from stream: " + x))//输出来自数 据源的当前 元素值
+                        .map(x -> x + 17)
+                        .peek(x -> System.out.println("after map: " + x))//输出map操作的结果
+                        .filter(x -> x % 2 == 0)
+                        .peek(x -> System.out.println("after filter: " + x))//输出经过filter操作的结果
+                        .limit(3)
+                        .peek(x -> System.out.println("after limit: " + x))//输出经过limit操作的结果
+                        .collect(Collectors.toList());
 
 
 
+        final Stream<String> buildStream = Stream.<String>builder().add("world").add("hi").build();
 
-
+        System.out.println(buildStream.collect(Collectors.toList()));
 
     }
 
