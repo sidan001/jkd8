@@ -55,8 +55,17 @@ public class Shop {
         return CompletableFuture.supplyAsync(() -> calculatePrice(product));
     }
 
+
+    public String getPrice_useDiscount(String product) {
+        double price = calculatePrice(product);
+        Discount.Code code = Discount.Code.values()[
+                RANDOM.nextInt(Discount.Code.values().length)];
+        return String.format("%s:%.2f:%s", name, price, code);
+    }
+
     private double calculatePrice(String product) {
-        delay();
+//        delay();
+        randomDelay();
         return RANDOM.nextDouble() * product.charAt(0) + product.charAt(1);
     }
 
@@ -67,7 +76,14 @@ public class Shop {
             throw new RuntimeException(e);
         }
     }
-
+    public static void randomDelay() {
+        int delay = 500 + RANDOM.nextInt(2000);
+        try {
+            Thread.sleep(delay);//[0.5s---2.5s]
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
     private static void doSomethingElse() {
         System.out.println("do something else");
     }
