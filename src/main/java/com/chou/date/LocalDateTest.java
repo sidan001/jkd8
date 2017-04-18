@@ -7,7 +7,9 @@ import java.time.Month;
 import java.time.chrono.MinguoDate;
 import java.time.format.TextStyle;
 import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
 import java.util.Locale;
+
 
 /**
  * Created by Administrator on 2017/4/17.
@@ -57,6 +59,11 @@ public class LocalDateTest {
         System.out.println(minguoDate_now);//Minguo ROC 106-04-17
 
         System.out.println("============================================================");
+
+
+        long daysBetween = ChronoUnit.DAYS.between(LocalDate.of(2010, 7, 1),
+                LocalDate.now());
+        System.out.println("2017-07-01到now相差总天数："+daysBetween);
 
 
     }
