@@ -1,13 +1,11 @@
 package com.chou.date;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 import java.time.chrono.MinguoDate;
 import java.time.format.TextStyle;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.Locale;
 
 
@@ -25,18 +23,18 @@ public class LocalDateTest {
         final DayOfWeek dayOfWeek = localDate.getDayOfWeek();
         final boolean leapYear = localDate.isLeapYear();
 
-        System.out.println("LocalDate.toString\t"+localDate);
-        System.out.printf("%s getYear()\t%d%n", "获取年",year, monthValue);
-        System.out.printf("%s getMonthValue():\t%d%n","获取当前月份值",monthValue);
-        System.out.printf("%s getMonth():\t%s%n","获取当前月份枚举名",month);
+        System.out.println("LocalDate.toString\t" + localDate);
+        System.out.printf("%s getYear()\t%d%n", "获取年", year, monthValue);
+        System.out.printf("%s getMonthValue():\t%d%n", "获取当前月份值", monthValue);
+        System.out.printf("%s getMonth():\t%s%n", "获取当前月份枚举名", month);
         System.out.printf("%s month.getDisplayName(TextStyle.FULL, Locale.CHINA):\t%s%n",
-                "获取中文当前月名",month.getDisplayName(TextStyle.FULL, Locale.CHINA));
-        System.out.printf("%s getDayOfMonth():\t%d%n","获取当前几号",dayOfMonth);
-        System.out.printf("%s lengthOfMonth():\t%d%n","获取当月有几天",lengthOfMonth);
-        System.out.printf("%s getDayOfWeek():\t%s%n","获取星期名",dayOfWeek);
+                "获取中文当前月名", month.getDisplayName(TextStyle.FULL, Locale.CHINA));
+        System.out.printf("%s getDayOfMonth():\t%d%n", "获取当前几号", dayOfMonth);
+        System.out.printf("%s lengthOfMonth():\t%d%n", "获取当月有几天", lengthOfMonth);
+        System.out.printf("%s getDayOfWeek():\t%s%n", "获取星期名", dayOfWeek);
         System.out.printf("%s dayOfWeek.getDisplayName(TextStyle.FULL, Locale.CHINA):\t%s%n",
-                "获取中文星期名",dayOfWeek.getDisplayName(TextStyle.FULL, Locale.CHINA));
-        System.out.printf("%s isLeapYear():\t%s%n","是否闰年",leapYear);
+                "获取中文星期名", dayOfWeek.getDisplayName(TextStyle.FULL, Locale.CHINA));
+        System.out.printf("%s isLeapYear():\t%s%n", "是否闰年", leapYear);
 
 
         System.out.println("============================================================");
@@ -49,7 +47,7 @@ public class LocalDateTest {
         int now_day = now.get(ChronoField.DAY_OF_MONTH);
         System.out.printf("当前时间 LocalDate.now()\t%s%n", now);
         System.out.printf("now.get(ChronoField.YEAR)\t%d%n", now_year);
-        System.out.printf("now.get(ChronoField.MONTH_OF_YEAR)\t%d%n", now_month );
+        System.out.printf("now.get(ChronoField.MONTH_OF_YEAR)\t%d%n", now_month);
         System.out.printf("now.get(ChronoField.DAY_OF_MONTH)\t%d%n", now_day);
 
         System.out.println("============================================================");
@@ -63,8 +61,13 @@ public class LocalDateTest {
 
         long daysBetween = ChronoUnit.DAYS.between(LocalDate.of(2010, 7, 1),
                 LocalDate.now());
-        System.out.println("2017-07-01到now相差总天数："+daysBetween);
+        System.out.println("2017-07-01到now相差总天数：" + daysBetween);
 
+
+        LocalDate date = LocalDate.of(2017, Month.APRIL, 19);
+        LocalDate nextWed = date.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
+        System.out.printf("For the date of %s( %s ), the next Wednesday is %s.%n",
+                date, date.getDayOfWeek(),nextWed);
 
     }
 }

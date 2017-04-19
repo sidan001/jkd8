@@ -22,6 +22,10 @@ public class PeriodTest {
         System.out.println(tenDays.get(ChronoUnit.DAYS));
         System.out.printf("toTotalMonths()\t%d%n", tenDays.toTotalMonths());
 
+        LocalDate date1 = LocalDate.of(2017, 2, 22), date2 = LocalDate.of(2017, 4, 18);
+        Period p = Period.ofDays((int)ChronoUnit.DAYS.between(date1, date2));
+        System.out.println("date1 + p: "+date1.plus(p));
+        System.out.println("date2 - p: "+date2.minus(p));
 
         printAgeAndBirthday(1989, 2, 22);
 
@@ -30,7 +34,7 @@ public class PeriodTest {
 
     //TODO 根据总天数可以算出正确生日，根据年月日算出的生日是错误的。
     private static void printBirthdayFromPeriod(int years, int months, int days) {
-        final Period yourAge = Period.of(years, months, days);
+        final Period period = Period.of(years, months, days);
         final LocalDate now = LocalDate.now();
         final LocalDate birthday = now.minus(28, ChronoUnit.YEARS)
                 .minus(1, ChronoUnit.MONTHS)
@@ -38,8 +42,8 @@ public class PeriodTest {
 
         System.out.println("your birthday is : "+ birthday);
         System.out.println("your birthday is : "+ now.minusYears(28).minusMonths(1).minusDays(27));
-        System.out.println("your birthday is : "+ now.minus(yourAge));
-        System.out.println("your birthday is : "+yourAge.subtractFrom(now));
+        System.out.println("your birthday is : "+ now.minus(period));
+        System.out.println("your birthday is : "+period.subtractFrom(now));
         System.out.println("your birthday is : "+ now.minus(Period.ofDays(10282)));
     }
 

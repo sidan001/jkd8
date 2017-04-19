@@ -4,7 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 /**
- * Created by Administrator on 2017/4/17.
+ * This class is useful for representing human-based time of day
+ * The LocalTime class does not store time zone or daylight saving time information.
  */
 public class LocalTimeTest {
     public static void main(String[] args) {

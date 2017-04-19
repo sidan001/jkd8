@@ -1,9 +1,6 @@
 package com.chou.date;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 
 /**
  * Created by Administrator on 2017/4/17.
@@ -27,5 +24,22 @@ public class LocalDateTimeTest {
         final LocalTime localTime = dt1.toLocalTime();
 
 
+        System.out.println(LocalDateTime.now());//2017-04-19T11:12:48.786  已经包含时区，+8：00
+        System.out.println(Instant.now());//2017-04-19T03:12:48.787Z        不包含时区
+
+
+        System.out.printf("now: %s%n", LocalDateTime.now());
+
+        System.out.printf("Apr 15, 1994 @ 11:30am: %s%n",
+                LocalDateTime.of(1994, Month.APRIL, 15, 11, 30));
+
+        System.out.printf("now (from Instant): %s%n",
+                LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault()));
+
+        System.out.printf("6 months from now: %s%n",
+                LocalDateTime.now().plusMonths(6));
+
+        System.out.printf("6 months ago: %s%n",
+                LocalDateTime.now().minusMonths(6));
     }
 }
