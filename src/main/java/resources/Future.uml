@@ -3,107 +3,105 @@
   <ID>JAVA</ID>
   <OriginalElement>java.util.concurrent.CompletableFuture</OriginalElement>
   <nodes>
-    <node x="516.0" y="81.0">java.util.concurrent.ScheduledFuture</node>
-    <node x="46.0" y="162.0">java.util.concurrent.RecursiveTask</node>
-    <node x="759.0" y="162.0">java.util.concurrent.FutureTask</node>
-    <node x="35.0" y="81.0">java.util.concurrent.CompletableFuture</node>
-    <node x="813.75" y="0.0">java.lang.Runnable</node>
-    <node x="390.5" y="0.0">java.util.concurrent.Future</node>
-    <node x="198.0" y="162.0">java.util.concurrent.CountedCompleter</node>
-    <node x="539.0" y="162.0">java.util.concurrent.RunnableScheduledFuture</node>
-    <node x="870.5" y="81.0">java.lang.Thread</node>
-    <node x="215.5" y="243.0">java.util.stream.AbstractTask</node>
-    <node x="710.5" y="81.0">java.util.concurrent.RunnableFuture</node>
-    <node x="215.0" y="81.0">java.util.concurrent.ForkJoinTask</node>
-    <node x="378.0" y="162.0">java.util.concurrent.RecursiveAction</node>
+    <node x="720.75" y="80.0">java.util.concurrent.RunnableFuture</node>
+    <node x="221.99999999999997" y="80.0">java.util.concurrent.ForkJoinTask</node>
+    <node x="516.25" y="80.0">java.util.concurrent.ScheduledFuture</node>
+    <node x="382.5" y="160.0">java.util.concurrent.RecursiveTask</node>
+    <node x="771.5" y="160.0">java.util.concurrent.FutureTask</node>
+    <node x="36.0" y="80.0">java.util.concurrent.CompletableFuture</node>
+    <node x="213.49999999999997" y="160.0">java.util.concurrent.RecursiveAction</node>
+    <node x="829.125" y="0.0">java.lang.Runnable</node>
+    <node x="395.625" y="0.0">java.util.concurrent.Future</node>
     <node x="0.0" y="0.0">java.util.concurrent.CompletionStage</node>
-    <node x="182.0" y="324.0">java.util.stream.AbstractShortCircuitTask</node>
+    <node x="27.5" y="160.0">java.util.concurrent.CountedCompleter</node>
+    <node x="540.5" y="160.0">java.util.concurrent.RunnableScheduledFuture</node>
+    <node x="887.75" y="80.0">java.lang.Thread</node>
+    <node x="44.5" y="240.0">java.util.stream.AbstractTask</node>
+    <node x="7.5" y="320.0">java.util.stream.AbstractShortCircuitTask</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="java.util.concurrent.RecursiveTask" target="java.util.concurrent.ForkJoinTask">
-      <point x="0.0" y="-15.5" />
-      <point x="112.0" y="137.0" />
-      <point x="236.0" y="137.0" />
-      <point x="-42.0" y="15.5" />
-    </edge>
-    <edge source="java.util.stream.AbstractShortCircuitTask" target="java.util.stream.AbstractTask">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java.util.concurrent.CountedCompleter" target="java.util.concurrent.ForkJoinTask">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java.util.concurrent.RunnableScheduledFuture" target="java.util.concurrent.RunnableFuture">
-      <point x="50.0" y="-15.5" />
-      <point x="689.0" y="137.0" />
-      <point x="745.5" y="137.0" />
-      <point x="-35.0" y="15.5" />
-    </edge>
-    <edge source="java.util.concurrent.CompletableFuture" target="java.util.concurrent.CompletionStage">
-      <point x="-40.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java.util.concurrent.RunnableFuture" target="java.lang.Runnable">
-      <point x="35.0" y="-15.5" />
-      <point x="815.5" y="61.0" />
-      <point x="839.75" y="61.0" />
-      <point x="-26.0" y="15.5" />
-    </edge>
-    <edge source="java.util.concurrent.RunnableFuture" target="java.util.concurrent.Future">
-      <point x="-35.0" y="-15.5" />
-      <point x="745.5" y="51.0" />
-      <point x="465.75" y="51.0" />
-      <point x="32.25" y="15.5" />
-    </edge>
     <edge source="java.util.concurrent.ScheduledFuture" target="java.util.concurrent.Future">
-      <point x="0.0" y="-15.5" />
-      <point x="589.0" y="61.0" />
-      <point x="444.25" y="61.0" />
-      <point x="10.75" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="593.25" y="60.0" />
+      <point x="451.875" y="60.0" />
+      <point x="11.25" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.RecursiveTask" target="java.util.concurrent.ForkJoinTask">
+      <point x="0.0" y="-15.0" />
+      <point x="451.5" y="135.0" />
+      <point x="332.0" y="135.0" />
+      <point x="44.0" y="15.0" />
     </edge>
     <edge source="java.util.concurrent.FutureTask" target="java.util.concurrent.RunnableFuture">
-      <point x="0.0" y="-15.5" />
-      <point x="35.0" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="36.75" y="15.0" />
     </edge>
     <edge source="java.util.concurrent.ForkJoinTask" target="java.util.concurrent.Future">
-      <point x="0.0" y="-15.5" />
-      <point x="278.0" y="61.0" />
-      <point x="422.75" y="61.0" />
-      <point x="-10.75" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="288.0" y="60.0" />
+      <point x="429.375" y="60.0" />
+      <point x="-11.25" y="15.0" />
+    </edge>
+    <edge source="java.util.stream.AbstractShortCircuitTask" target="java.util.stream.AbstractTask">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="java.util.stream.AbstractTask" target="java.util.concurrent.CountedCompleter">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.CountedCompleter" target="java.util.concurrent.ForkJoinTask">
+      <point x="0.0" y="-15.0" />
+      <point x="110.5" y="135.0" />
+      <point x="243.99999999999997" y="135.0" />
+      <point x="-44.0" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableScheduledFuture" target="java.util.concurrent.RunnableFuture">
+      <point x="52.75" y="-15.0" />
+      <point x="698.75" y="135.0" />
+      <point x="757.5" y="135.0" />
+      <point x="-36.75" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture" target="java.util.concurrent.CompletionStage">
+      <point x="-41.5" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="java.util.concurrent.RunnableScheduledFuture" target="java.util.concurrent.ScheduledFuture">
-      <point x="-50.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
+      <point x="-52.75" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.lang.Runnable">
+      <point x="36.75" y="-15.0" />
+      <point x="831.0" y="60.0" />
+      <point x="855.875" y="60.0" />
+      <point x="-26.75" y="15.0" />
     </edge>
     <edge source="java.util.concurrent.CompletableFuture" target="java.util.concurrent.Future">
-      <point x="40.0" y="-15.5" />
-      <point x="155.0" y="51.0" />
-      <point x="401.25" y="51.0" />
-      <point x="-32.25" y="15.5" />
+      <point x="41.5" y="-15.0" />
+      <point x="160.5" y="50.0" />
+      <point x="406.875" y="50.0" />
+      <point x="-33.75" y="15.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.util.concurrent.Future">
+      <point x="-36.75" y="-15.0" />
+      <point x="757.5" y="50.0" />
+      <point x="474.375" y="50.0" />
+      <point x="33.75" y="15.0" />
     </edge>
     <edge source="java.lang.Thread" target="java.lang.Runnable">
-      <point x="0.0" y="-15.5" />
-      <point x="916.0" y="61.0" />
-      <point x="891.75" y="61.0" />
-      <point x="26.0" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="934.25" y="60.0" />
+      <point x="909.375" y="60.0" />
+      <point x="26.75" y="15.0" />
     </edge>
     <edge source="java.util.concurrent.RecursiveAction" target="java.util.concurrent.ForkJoinTask">
-      <point x="0.0" y="-15.5" />
-      <point x="448.5" y="137.0" />
-      <point x="320.0" y="137.0" />
-      <point x="42.0" y="15.5" />
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="485.5" y="198.0" />
-  <SelectedNodes>
-    <node>java.lang.Thread</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0" x="490.5" y="175.0" />
+  <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
