@@ -1,12 +1,8 @@
 package com.chou;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.IntConsumer;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -56,6 +52,8 @@ public class Demo {
 
         System.out.println(subsets(Arrays.asList(1,4,9)));
 
+        printPrimeNumber(10);
+        printFibonacci(20);
     }
     public void setPi(int pi) {
         this.pi = pi;
@@ -100,5 +98,26 @@ public class Demo {
         return r;
     }
 
+    static void printPrimeNumber(int number){
+        IntStream.range(2,number)
+                .peek(t ->{
+                    IntStream.range(2,t)
+                            .filter(x -> t % x == 0)
+                            .findAny()
+                            .ifPresent(i -> System.out.printf("%d is equals %d * %d%n", t, i, t / i));
+                })
+                .filter(t -> IntStream.range(2,t).noneMatch(i -> t % i == 0))
+                .forEach(t -> System.out.println(t + " is a prime number"));
+    }
 
+    static void printFibonacci(int n) {
+        List<Integer> collect = Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
+                .map(t -> t[0])
+                .peek(t -> System.out.println(t + " "))
+                .limit(n)
+                .collect(Collectors.toList());
+        System.out.println(collect);
+
+
+    }
 }
