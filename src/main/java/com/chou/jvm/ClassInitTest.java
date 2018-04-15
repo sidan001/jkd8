@@ -5,14 +5,17 @@ package com.chou.jvm;
  */
 public class ClassInitTest {
     public static void main(String[] args) {
-       /*
-       //没有对Child主动使用，对Prent触发了主动使用，导致Parent初始化
+       /*//没有对Child主动使用，对Prent触发了主动使用，导致Parent初始化
+        System.out.println(Child.str);*/
+
+
+        /*//对Child主动使用，导致Child需要初始化，子类初始化要求父类进行初始化
+        System.out.println(Child.str1);*/
+
+
+        System.out.println(Child.CONSTANT_STR);
+
         System.out.println(Child.str);
-        */
-
-
-        //对Child主动使用，导致Child需要初始化，子类初始化要求父类进行初始化
-        System.out.println(Child.str1);
     }
 }
 
@@ -24,7 +27,8 @@ class Parent{
 }
 
 class Child extends Parent{
-    public static String str1 = "Parent str1";
+    public static String str1 = "Child str";
+    public static final String CONSTANT_STR = "Child CONSTANT_STR";
     static {
         System.out.println("Child init");
     }
